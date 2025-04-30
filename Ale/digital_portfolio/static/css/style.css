@@ -499,15 +499,14 @@ p, li, span, a, input, textarea {
 
 #blog {
   padding: 4rem 10%;
-  background-color: transparent; /* Hintergrund transparent machen */
+  background-color: transparent;             /* Hintergrund transparent */
   text-align: center;
-  position: relative; /* Stellt sicher, dass der Blog Bereich über den Icons liegt */
-  z-index: 1; /* Erhöht den Z-Index, damit der Blog-Bereich vor den Icons liegt */
-  display: flex;          /*  ❰❰  neu  */
-  flex-direction: column; /* Cards untereinander           */
-  align-items: center;    /* horizontales Zentrieren aller */
+  position: relative;                        /* liegt über den schwebenden Icons */
+  z-index: 1;
+  display: flex;                             /* Karten untereinander */
+  flex-direction: column;
+  align-items: center;                       /* horizontal zentriert */
 }
-
 
 #blog h1 {
   font-size: 2.5rem;
@@ -528,13 +527,13 @@ p, li, span, a, input, textarea {
   border-radius: 1rem;
   width: 100%;
   max-width: 700px;
-  margin: 3rem auto;
+  margin: 3rem auto;                         /* mittig ausrichten */
   box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-item:hover {
-  transform: scale(1.05); /* Slightly increase the size on hover */
+  transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0, 168, 232, 0.7);
 }
 
@@ -561,55 +560,41 @@ p, li, span, a, input, textarea {
 .blog-item .btn {
   background-color: var(--color-accent);
   color: var(--color-white);
-  text-decoration: none;
   padding: 0.6rem 1rem;
   border-radius: 0.4rem;
   font-weight: 500;
   transition: background-color 0.3s ease;
-  transform: translateY(0);
-  display: inline-block; /* Wichtig, um es wie einen Button erscheinen zu lassen */
-  text-decoration: none; /* Um zu verhindern, dass der Text unterstrichen ist */
+  display: inline-block;
+  text-decoration: none;
   text-align: center;
 }
 
-/* Hover-Effekte für Blog-Buttons */
+/* Hover-Effekt */
 .blog-item .btn:hover {
   background-color: var(--color-bg-dark);
 }
 
-
-.t-center {
-  text-align: center;
+/* -------- Abstand für Buttons IM Blog-Content (Download-Button etc.) -------- */
+#blog .btn {
+  margin-top: 2.5rem;       /* Abstand oberhalb des Buttons */
 }
 
-.my-2 {
-  margin: 2rem 0;
-}
+/* ========== UTILITY-KLASSEN ========== */
+.t-center { text-align: center; }
 
-.f-2 {
-  font-size: 2rem;
-}
+.my-2 { margin: 2rem 0; }
 
-.s-center {
-  justify-content: center;
-}
+.f-2 { font-size: 2rem; }
 
-.f-col {
-  flex-direction: column;
-}
+.s-center { justify-content: center; }
 
-.items-center {
-  align-items: center;
-}
+.f-col { flex-direction: column; }
 
-.mx-1 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+.items-center { align-items: center; }
 
-.m-top {
-  margin-top: 1rem;
-}
+.mx-1 { margin-left: 1rem; margin-right: 1rem; }
+
+.m-top { margin-top: 1rem; }
 
 
 /* ========== FOOTER ========== */
