@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="home" class="flex s-center sw-80 m-auto">
+    <div class="home-left">
+        <div class="home-content">
+            <h1 class="t-white">Alejandro Scheifele</h1>
+            <h4 class="poppins">Data Science Student at FHNW</h4>
+            <div class="buttons">
+                <a href="{% static 'pdf/CV_English_11_2024 copy.pdf' %}" target="_blank" class="btn live poppins">Resume</a>
+                <a href="{% url 'about' %}" class="btn poppins">About me</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-right">
+        <div class="circle" id="mainImage">
+            <img src="{% static 'images/Profilfoto.PNG' %}" alt="Profile Picture">
+        </div>
+    </div>
+</section>
+
+<!-- 🧩 Contact Section -->
+<section style="text-align: center; margin-bottom: 4rem;">
+    <h2 class="t-white">Contact me:</h2>
+    <h3 class="t-white">alejandro.scheifeledelrio@outlook.com</h3>
+</section>
+{% endblock %}

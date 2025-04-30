@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Projects Section -->
+<section id="projects">
+    <h1 class="t-white">Projects</h1>
+
+    <!-- Projects Grid -->
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <h3 class="t-white">Container Tracking</h3>
+            <p>A challenge where we had to program a container tracking system able to track the route of a container truck, and its inner temperature and humidity.</p>
+            <img src="{% static 'images/container.png' %}" alt="Container Tracking">
+            <div class="project-links">
+                <a href="https://github.com/your-project-link" class="project-link">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <h3 class="t-white">Superleague Table Prediction</h3>
+            <p>A challenge where we tried to predict the outcome of the Swiss 2024/25 Superleague table with probability, regression and statistics.</p>
+            <img src="{% static 'images/table.png' %}" alt="Superleague Prediction">
+            <div class="project-links">
+                <a href="https://github.com/your-project-link" class="project-link">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <h3 class="t-white">Higher Vocational Diploma Thesis</h3>
+            <p>For the company Sabo, we developed a digital twin of an electric monorail system, enabling the simulation and testing of future installations as well as improvements to existing systems directly in the office. This innovative solution provides an efficient way to evaluate optimized system configurations and adjustments before implementing them in the real-world environment.</p>
+            <img src="path/to/your/image3.jpg" alt="Matura Project">
+            <div class="project-links">
+                <a href="https://github.com/your-project-link" class="project-link">GitHub</a>
+                <a href="path/to/video" class="project-link">Take a look!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ongoing-projects">
+        <h2 class="t-white">Ongoing Projects</h2>
+        <div id="ongoing-projects-container">
+        <!-- Ongoing Project 1 -->
+        <div class="ongoing-card">
+            <h3 class="t-white">Climate Challenge</h3>
+            <p>A challenge to show how generative AI can be used to communicate climate change impacts by building an interactive website and writing a climate data story.</p>
+            <div class="project-links">
+                <a href="https://github.com/your-project-link" class="project-link">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
+

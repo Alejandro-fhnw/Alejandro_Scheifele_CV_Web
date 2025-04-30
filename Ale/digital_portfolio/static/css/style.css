@@ -1,0 +1,931 @@
+/* ========== FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;500;700&display=swap');
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  --color-bg: #0d1b2a;
+  --color-bg-dark: #102030;
+  --color-accent: #00a8e8;
+  --color-white: #ffffff;
+  --color-light: #e0e1dd;
+  --color-card: #3a8dff;
+  --font-body: 'Open Sans', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+}
+
+/* ========== GLOBAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-light);
+}
+
+#content {
+  flex: 1;
+  position: relative;
+  z-index: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+p, li, span, a, input, textarea {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* ========== NAVBAR ========== */
+#navbar {
+  line-height: 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 0.5px solid #ffffff52;
+  background-color: var(--color-bg-dark);
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#navbar ul li {
+  margin: 0 1rem;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+.nav-col a:hover {
+  border-radius: 0.4rem;
+  background-color: var(--color-white);
+  color: var(--color-bg-dark);
+}
+
+/* ========== BUTTONS ========== */
+
+.btn,
+.live {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.6rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+/* Standard-Button */
+.btn {
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+}
+
+/* Primärer Button */
+.live {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+/* Hover-Stil für beide */
+.btn:hover,
+.live:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 168, 232, 0.3);
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.live:hover {
+  background-color: var(--color-white);
+  color: var(--color-accent);
+}
+
+/* ========== HOME ========== */
+#home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10%;
+  gap: 2rem;
+}
+
+.home-left {
+  width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-left h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.home-left h4 {
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-weight: 300;
+  font-family: var(--font-body);
+  letter-spacing: 0.5px;
+  color: var(--color-white);
+}
+
+.buttons {
+  margin-top: 2.5rem; /* Abstand zum Text */
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+.home-right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-right img {
+  width: 85%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+  margin-top: 1rem;
+}
+
+/* ========== ABOUT SECTION ========== */
+#about {
+  padding: 4rem 10%; /* Abstand oben und unten */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Titel zentrieren */
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center; /* Titel zentrieren */
+  margin-bottom: 3rem; /* Abstand zwischen Titel und Inhalt */
+}
+
+/* Container für den Text und das Bild nebeneinander */
+.about-container {
+  display: flex;
+  justify-content: space-between; /* Text und Bild nebeneinander */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-left {
+  width: 55%;  /* Textbereich */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-right {
+  width: 40%;  /* Bildbereich */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-right img {
+  width: 100%;
+  max-width: 400px;  /* Bildgröße anpassen */
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+}
+
+.about-left h1 {
+  font-size: 2.5rem; /* Größerer Titel */
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.about-left p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--color-light);
+  margin-bottom: 1.2rem;
+}
+
+#skills {
+  padding: 4rem 10%;
+  display: flex;
+  justify-content: center; /* Zentriert die Box horizontal */
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Title centered */
+}
+
+#skills h1 {
+  font-size: 2.5rem; /* Schriftgröße für bessere Sichtbarkeit */
+  margin-bottom: 2rem; /* Abstand zwischen Titel und Box */
+  text-align: center; /* Titel zentrieren */
+}
+
+.services-container {
+  display: flex;
+  justify-content: center; /* Zentriert die Box mit den Icons */
+  align-items: center;
+  width: 100%;
+}
+
+.skills-right {
+  width: 80%; /* Setzt eine feste Breite für die Box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tech-card {
+  background-color: var(--color-bg-dark);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+}
+
+.tech-icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Tooltip Positioning */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 10; /* Sicherstellen, dass der Tooltip vor anderen Elementen erscheint */
+}
+
+.tooltip img {
+  width: 50px;
+  height: auto;
+  filter: grayscale(100%); /* Graustufenfilter hinzufügen */
+  transition: filter 0.3s ease-in-out; /* Weicher Übergang */
+}
+
+.tooltip:hover img {
+  filter: grayscale(0%); /* Graustufen entfernen bei Hover */
+  transform: scale(1.1); /* Leicht vergrößern bei Hover */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: var(--color-light);
+  color: var(--color-bg-dark);
+  text-align: center;
+  border-radius: 0.4rem;
+  padding: 5px;
+  position: absolute;
+  bottom: 125%; /* Position des Tooltips über dem Icon */
+  left: 50%;
+  margin-left: -60px; /* Um den Tooltip zentriert über dem Icon zu positionieren */
+  z-index: 15; /* Sicherstellen, dass der Tooltip vor anderen Elementen liegt */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Sanfte Übergänge */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* ========== PROJECTS SECTION ========== */
+#projects {
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+#projects h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-white);
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: var(--color-card);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 0 25px rgba(0, 168, 232, 0.7);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: var(--color-light);
+    margin-bottom: 1.5rem;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project-link {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--color-bg-dark);
+}
+
+/* ========== ONGOING PROJECTS ========== */
+#ongoing-projects {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; /* Verringerter Abstand zwischen den Projekten */
+  flex-wrap: wrap;
+  margin-top: 2rem;  /* Abstand nach oben hinzugefügt, um Überschneidungen zu vermeiden */
+}
+
+.ongoing-projects h2 {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;  /* Erhöht den Abstand oben, um Überlappungen zu vermeiden */
+}
+
+/* Ongoing Projects Layout */
+#ongoing-projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Gibt den Projekten Platz nebeneinander */
+  gap: 2rem; /* Reduzierter Abstand zwischen den Projekten */
+  margin-top: 3rem;
+}
+
+/* Anpassung der Projektdimensionen */
+.ongoing-card {
+    background-color: var(--color-card);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 30%;  /* Breite auf 48% setzen, um sie näher beieinander zu positionieren */
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure hover effect is applied */
+.ongoing-card:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 0 25px rgba(0, 168, 232, 0.7);
+}
+
+.ongoing-card h3 {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.ongoing-card p {
+    font-size: 1rem;
+    color: var(--color-light);
+    margin-bottom: 1.5rem;
+}
+
+.ongoing-card .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ongoing-card .project-link {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.ongoing-card .project-link:hover {
+    background-color: var(--color-bg-dark);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card,
+    .ongoing-card {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ========== BLOG ========== */
+
+#blog {
+  padding: 4rem 10%;
+  background-color: transparent; /* Hintergrund transparent machen */
+  text-align: center;
+  position: relative; /* Stellt sicher, dass der Blog Bereich über den Icons liegt */
+  z-index: 1; /* Erhöht den Z-Index, damit der Blog-Bereich vor den Icons liegt */
+}
+
+
+#blog h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.blog-item {
+  background-color: var(--color-card);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0 0 25px rgba(0, 168, 232, 0.7);
+}
+
+.blog-item h2 {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.blog-item p {
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ========== BLOG BUTTONS ========== */
+.blog-item .btn {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  transform: translateY(0);
+  display: inline-block; /* Wichtig, um es wie einen Button erscheinen zu lassen */
+  text-decoration: none; /* Um zu verhindern, dass der Text unterstrichen ist */
+  text-align: center;
+}
+
+/* Hover-Effekte für Blog-Buttons */
+.blog-item .btn:hover {
+  background-color: var(--color-bg-dark);
+}
+
+
+.t-center {
+  text-align: center;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.f-2 {
+  font-size: 2rem;
+}
+
+.s-center {
+  justify-content: center;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.m-top {
+  margin-top: 1rem;
+}
+
+
+/* ========== FOOTER ========== */
+#footer {
+  background-color: #010101;
+  padding: 2rem 1rem;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 3rem;
+}
+
+/* ========== BACKGROUND ICONS ========== */
+.background-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: url('https://skillicons.dev/icons?i=anaconda,arduino,cpp,css,dart,django,flutter,github,gitlab,html,js,notion,pycharm,python,r,raspberrypi,vscode,windows&theme=dark');
+  background-repeat: repeat;
+  background-size: 150px;
+  opacity: 0.02;
+  filter: grayscale(100%) brightness(2);
+}
+
+/* ========== CONTACT PAGE ========== */
+#contact {
+  padding: 4rem 10%;
+  background-color: transparent; /* Hintergrund transparent machen */
+  text-align: center;
+  position: relative; /* Stellt sicher, dass der Blog Bereich über den Icons liegt */
+  z-index: 1; /* Erhöht den Z-Index, damit der Blog-Bereich vor den Icons liegt */
+}
+
+#contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-item {
+  background-color: var(--color-card);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0 0 25px rgba(0, 168, 232, 0.7);
+}
+
+.contact-item h2 {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.contact-item p {
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.f-2 {
+  font-size: 2rem;
+}
+
+.s-center {
+  justify-content: center;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.m-top {
+  margin-top: 1rem;
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-left,
+  .home-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-left h4 {
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .home-right img {
+    width: 70%;
+    max-width: 240px;
+    margin-top: 2rem;
+  }
+}
+
+/* ========== WORK ========== */
+#work {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+#work h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.work-item {
+  background-color: var(--color-card);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 48%; /* Make each box take up almost half the space */
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0 0 25px rgba(0, 168, 232, 0.7);
+}
+
+.work-item h2 {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.work-item p {
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-bottom: 1.5rem;
+}
+
+.work-item .btn {
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  border-radius: 0.6rem;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.work-item .btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 168, 232, 0.3);
+}
+
+@media (max-width: 768px) {
+  .work-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-item {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* ========== floating-icons ========== */
+.floating-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.float-icon {
+  position: absolute;
+  width: 50px;
+  opacity: 0.15;
+  filter: grayscale(70%) brightness(1.4);
+  animation: float 8s infinite ease-in-out alternate;
+}
+
+@keyframes float {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  50%  { transform: translate(10px, -10px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Verzögerungen */
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 1s; }
+.delay-2 { animation-delay: 2s; }
+.delay-3 { animation-delay: 3s; }
+.delay-4 { animation-delay: 4s; }
+.delay-5 { animation-delay: 5s; }
+.delay-6 { animation-delay: 6s; }
+.delay-7 { animation-delay: 7s; }
+.delay-8 { animation-delay: 8s; }
+.delay-9 { animation-delay: 9s; }
+.delay-10 { animation-delay: 10s; }
+.delay-11 { animation-delay: 11s; }
+.delay-12 { animation-delay: 12s; }
+.delay-13 { animation-delay: 13s; }
+.delay-14 { animation-delay: 14s; }
+
+/* ========== FOOTER ========== */
+#footer {
+  background-color: #010101;
+  padding: 2rem 1rem;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 3rem;
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#footer ul li a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#footer ul li a:hover {
+  color: var(--color-accent);
+}
+
+.font-awesome li i {
+  background-color: var(--color-card);
+  padding: 0.6rem;
+  border: 1px solid var(--color-card);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.font-awesome li i:hover {
+  background: transparent;
+  color: var(--color-card);
+}

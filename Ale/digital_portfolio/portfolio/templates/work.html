@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="work">
+    <h1>Work</h1>
+    <div class="work-container">
+        <div class="work-item">
+            <h3>Huber Partner Elektro GmbH</h3>
+            <p>
+                I completed my apprenticeship as an electrical installer (EFZ) at Huber Partner Elektro GmbH, where I subsequently worked for an additional two years. During my apprenticeship, I learned all the tasks of an electrical installer and gained extensive practical experience. Starting from the fourth year of my apprenticeship, my focus shifted to the installation and wiring of heat pump and photovoltaic systems. This specialization allowed me to acquire in-depth knowledge in modern energy technologies and sustainable system solutions.
+            </p>
+        </div>
+        <div class="work-item">
+            <h3>Sabo Software & Engineering GmbH</h3>
+            <p>
+                As part of my studies at ABBTS, I started working at Sabo Software & Engineering in February 2022. There, I was responsible for the development and programming of control systems, as well as their wiring. The application areas ranged from controls for product inspection to controls for electric monorail systems. In particular, I had the opportunity to work independently in the area of electric monorails and gained valuable learning experience. Additionally, Sabo is involved in the power supply sector, where I was responsible for controlling operational instructions for blockings and switchings according to specified construction programs.
+            </p>
+            <a href="{% static 'pdf/A_Zwischenzeugnis_Scheifele-Alejandro_2025-02-28.pdf' %}" class="project-link" target="_blank">View Employment Reference DE</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

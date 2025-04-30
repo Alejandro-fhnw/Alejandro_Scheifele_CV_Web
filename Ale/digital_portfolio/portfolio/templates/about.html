@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="about">
+    <!-- Titel "About Me" - oben zentriert -->
+    <h1 class="about-title">About Me</h1>
+
+    <!-- Container für Text und Bild -->
+    <div class="about-container flex s-around">
+
+        <!-- Text Section -->
+        <div class="about-left flex s-center items-center">
+            <div class="about-content">
+                <h1 class="t-white m-b-1 poppins">Hello, my name is Alejandro Scheifele.</h1>
+
+                <p class="t-white poppins">
+                    I am a motivated Data Science student at the University of Applied Sciences and Arts Northwestern Switzerland (FHNW), with a strong passion for data analysis and interpretation. My interests lie particularly in the exploration of Artificial Intelligence, the application of data science in sports analytics, as well as the use of statistics and stochastic processes for modeling and evaluating complex datasets.
+                </p>
+
+                <p class="t-white poppins">
+                    Currently, I am in the second semester of my Bachelor's degree, focusing on deepening my knowledge in areas such as machine learning, data visualization, web technologies, and advanced statistical methods and stochastic processes.
+                </p>
+
+                <p class="t-white poppins">
+                    Before my studies, I completed an apprenticeship as an electrical installer and then pursued a degree in Systems Engineering at ABBTS. These solid technical foundations, along with my professional experience, form a strong basis for my current work as a Data Scientist.
+                </p>
+
+                <p class="t-white poppins">
+                    In my free time, I am actively involved in sports, including football and snowboarding. I play for SV Höngg in the 1st League Classic, and I enjoy engaging in physical activities both in nature and as part of a team. Additionally, I have a passion for software development, spending my free time creating applications for various purposes, from games to analytical tools that offer practical value.
+                </p>
+
+                <p class="t-white poppins">
+                    I am always open to exciting projects and internships — please feel free to reach out!
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="about-right flex s-center items-center">
+            <img src="{% static 'images/Fussballkombifoto2.jpg' %}" alt="Alejandro Scheifele playing football" style="width: 60%;">
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
