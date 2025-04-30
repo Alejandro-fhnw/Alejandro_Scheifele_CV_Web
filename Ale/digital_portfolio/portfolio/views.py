@@ -19,12 +19,19 @@ def work(request):
     return render(request, 'work.html')  # Hier wird die work.html-Seite geladen
 
 def blog(request):
-    posts = Post.objects.all().order_by('-created_at')  # Or whatever field you use
-    return render(request, 'blog.html', {'posts': posts})
+    """
+    Liefert die Blog-Übersichtsseite mit allen Cards.
+    Kein Kontext nötig, da die Cards statisch in blog.html liegen.
+    """
+    return render(request, "blog.html")
 
-def post_detail(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-    return render(request, 'post_detail.html', {'post': post})
+
+def post_detail(request, slug):
+    """
+    Rendert post_detail.html und gibt den Slug an das Template weiter,
+    damit dort das passende Snippet eingebunden wird.
+    """
+    return render(request, "post_detail.html", {"slug": slug})
 
 def projects(request):
     return render(request, 'projects.html')

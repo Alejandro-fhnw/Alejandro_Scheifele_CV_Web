@@ -503,6 +503,9 @@ p, li, span, a, input, textarea {
   text-align: center;
   position: relative; /* Stellt sicher, dass der Blog Bereich über den Icons liegt */
   z-index: 1; /* Erhöht den Z-Index, damit der Blog-Bereich vor den Icons liegt */
+  display: flex;          /*  ❰❰  neu  */
+  flex-direction: column; /* Cards untereinander           */
+  align-items: center;    /* horizontales Zentrieren aller */
 }
 
 
@@ -525,6 +528,7 @@ p, li, span, a, input, textarea {
   border-radius: 1rem;
   width: 100%;
   max-width: 700px;
+  margin: 3rem auto;
   box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

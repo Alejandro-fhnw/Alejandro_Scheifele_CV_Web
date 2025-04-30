@@ -1,19 +1,23 @@
 {% extends "base.html" %}
+{% load static %}                 {# nur falls nicht schon in base.html #}
+
 {% block content %}
 <section id="blog">
-    <h1 class="t-center my-2 t-white f-2">Blog</h1>
-    <div class="blog-container flex s-center">
-        {% for post in posts %}
-        <div class="blog-item flex f-col s-center items-center">
-            <h2 class="t-white poppins">{{ post.title }}</h2>
-            <p class="t-white poppins">{{ post.content|truncatewords:25 }}</p>
-            <div class="buttons">
-                <a href="{% url 'post_detail' post.id %}" class="btn mx-1 m-top">Read More</a>
-            </div>
-        </div>
-        {% empty %}
-        <p class="t-white t-center">No blog posts yet!</p>
-        {% endfor %}
-    </div>
+  <h1 class="t-center my-2 t-white f-2">Blog</h1>
+
+  <!-- UBS Reflection Card -->
+  <div class="blog-item">
+      <h2 class="t-white poppins f-2 t-center">
+          Reflection on the AI&nbsp;Solutions Engineer Internship at UBS
+      </h2>
+
+      <p class="t-white poppins">
+          The off-cycle internship at UBS appeals to me because it merges finance with cutting-edge AI, offers real
+          prototyping in cross-functional teams and lets me build on a lifelong exposure to investment banking …
+      </p>
+
+      <a href="{% url 'post_detail' 'ubs-reflection' %}" class="btn m-top">Read More</a>
+  </div>
 </section>
 {% endblock %}
+
